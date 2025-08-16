@@ -873,8 +873,8 @@ final class TextInputView: UIView, UITextInput {
         languageMode.detectIndentStrategy()
     }
 
-    func textPreview(containing range: NSRange) -> TextPreview? {
-        layoutManager.textPreview(containing: range)
+    func textPreview(containing range: NSRange, peekLength: Int = 50) -> TextPreview? {
+        layoutManager.textPreview(containing: range, peekLength: peekLength)
     }
 
     func layoutLines(toLocation location: Int) {
