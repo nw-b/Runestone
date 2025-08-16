@@ -935,8 +935,8 @@ open class TextView: UIScrollView {
     /// Returns a peek into the text view's underlying attributed string.
     /// - Parameter range: Range of text to include in text view. The returned result may span a larger range than the one specified.
     /// - Returns: Text preview containing the specified range.
-    public func textPreview(containing range: NSRange) -> TextPreview? {
-        textInputView.textPreview(containing: range)
+    public func textPreview(containing range: NSRange, peekLength: Int = 50) -> TextPreview? {
+        textInputView.textPreview(containing: range, peekLength: peekLength)
     }
 
     /// Selects a highlighted range behind the selected range if possible.
